@@ -1,0 +1,292 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p, li {
+	font-size: 14px;
+}
+
+.blue {
+	color: RoyalBlue;
+}
+
+.orange {
+	color: OrangeRed;
+}
+
+#container {
+	width: 1000px;
+}
+
+#header {
+	background: linear-gradient(white, #F5F5F5); 
+}
+
+#header ul {
+	text-align: right;
+	border: 1px solid #DCDCDC;
+	border-radius: 5px;
+	margin-left: 450px;
+	padding-bottom: 5px;
+	display: inline-block;
+	background-color: #F5F5F5;
+	position: relative;
+	bottom: 3px;
+	left: 120px;
+}
+
+#header ul li {
+	list-style-type: none;
+	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
+	border-right: 1px solid #DCDCDC;
+	margin-top: 0;
+	font-size: 12px;
+}
+
+#login {
+	display: inline-block;
+	width: 50px;
+	text-align: center;
+	margin-top: 0;
+	padding: 5px;
+	position: relative;
+	left: 130px;
+	background: linear-gradient(SkyBlue, DodgerBlue);
+	border-radius: 4px;
+	bottom: 2px;
+}
+
+#need {
+	display: block;
+}
+
+#need img {
+	display: inline-block;
+	width:75px;
+}
+
+#title {
+	display: inline-block;
+	padding-bottom: 5px;
+	margin-top: 20px;
+	width: 500px;
+	vertical-align: top;
+}
+
+#bar {
+	background: linear-gradient(RoyalBlue, Blue, RoyalBlue);
+	color: white;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#info {
+	width: 670px;
+	display: block;
+	padding-left: 330px;
+	background: linear-gradient(#DCDCDC, white);
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 15px;
+}
+
+#info img {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#home {
+	position: relative;
+	top: 15px;
+	right: 35px;
+}
+
+#ppc {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	top: 20px;
+	right: 35px;
+}
+
+#ppc a {
+	text-decoration: none;
+	color: DodgerBlue;
+}
+
+#phone {
+	text-align: right;
+	position: absolute;
+	right: 620px;
+}
+
+#contact {
+	display: inline-block;
+	width: 590px;
+	position: relative;
+	left: 200px;
+}
+
+#contact h2 {
+	color: DodgerBlue;
+}
+
+#contact h5, #contact h2 {
+	display: block;
+	text-align: center;
+}
+
+#sidebar {
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 15px;
+	position: relative;
+	bottom: 15px;
+}
+
+#sidebar img {
+	width: 250px;
+	position: relative;
+	bottom: 185px;
+	border: 2px solid grey;
+}
+
+#firstTitle {
+	padding-bottom: 20px;
+}
+
+#drive {
+	padding-bottom: 5px;
+}
+
+#get {
+	padding-bottom: 20px;
+}
+
+#demo {
+	background: linear-gradient(LightBlue, RoyalBlue);
+	color: white;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#trial {
+	background: linear-gradient(Orange, OrangeRed);
+	color: white;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#req {
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #DCDCDC;
+	margin-bottom: 20px;
+}
+
+#stay {
+	z-index: 100;
+	position: relative;
+	top: 20px;
+	left: 10px;
+}
+
+#stay h3 {
+	margin-bottom: 20px;
+}
+
+#button {
+	text-align: center;
+	margin-top: 15px;
+	padding: 5px;
+	background: linear-gradient(RoyalBlue, DarkBlue);
+	color: white;
+	width: 200px;
+	position: relative;
+	left: 10px;
+	border-radius: 3px;
+}
+
+#content, #content ul {
+	width: 700px;
+	display: inline-block;
+	padding-left: 30px;
+	font-size: 12px;
+}
+
+#achieve {
+	padding-top: 5px;
+	border-top: 1px solid #DCDCDC;
+	padding-bottom: 15px;
+	color: RoyalBlue;
+}
+
+#description {
+	padding-bottom: 15px;
+}
+
+#content ul {
+	margin-bottom: 35px;
+}
+
+#content ul li {
+	margin-bottom: 5px;
+	padding-right: 15px;
+}
+
+#box {
+	position: relative;
+	padding-bottom: 10px;
+	border: 5px solid SkyBlue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 600px;
+}
+
+#box img {
+	display: inline-block;
+	height: 80px;
+	padding-right: 20px;
+	vertical-align: top;
+}
+
+#box div {
+	width: 500px;
+	display: inline-block;
+}
+
+#box div h2 {
+	color: RoyalBlue;
+	margin-bottom: 10px;
+
+}
+
+#box div p {
+	margin-bottom: 20px;
+}
+
+#auto {
+	color: RoyalBlue;
+	margin-bottom: 10px;
+}
+
+#gbutton {
+	padding: 10px;
+	background: linear-gradient(LawnGreen, LimeGreen, LawnGreen);
+	width: 130px;
+	color: white;
+	border-radius: 7px;
+	border: 2px solid green;
+}

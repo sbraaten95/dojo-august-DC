@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="jonestyle.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+		</script>
+		<script>
+			$(document).ready(function() {
+				var $count = 1;
+				var $selected = null;
+
+				$('.form').hide();
+
+				//You need to not add the attribute onto #collection, as that names the UL id as 2!!!!!!!
+				//Instead you should add the attribute to the <li> that you created, so how do you access that?
+				//
+
+				$('#new').click(function() {
+					$count++;
+					$('select').append('<option>'+$count+'</option>').attr('value', $count);
+					$('#collection').append('<li id="'+$count+'" class="triangle"></li>').on("click", function() {
+						alert($(this).html());
+					});
+
+					//The stuff below is an attempt to make things dynamic. This should be figured out.
+
+					/*.on("click", jQuery('li[id="2"]', $(this)), function() {
+						$selected = $('<li id="'+$count+'"></li>');
+						console.log(jQuery($selected));
+					});*/
+				});
+
+				$('#1').click(function() {
+					$('#2').slideToggle(100, function(){});
+					$('#3').slideToggle(500, function(){});
+					$('#4').slideToggle(1000, function(){});
+				});
+
+				$('.triangle').click(function(){
+					$selected = $(this);
+					console.log($selected);
+				});
+
+				$('i').click(function () {
+					$('.form').show('.form');
+					$('button').focus();
+				});
+
+				$('input[type=radio]').click(function() {
+
+					switch ($('#'+($('select').val())).css('border-right')) {
+						case '40px solid rgb(255, 0, 0)':
+							$('#'+($('select').val())).removeClass('red');
+							break;
+						case '40px solid rgb(0, 0, 255)':
+							$('#'+($('select').val())).removeClass('blue');
+							break;
+						case '40px solid rgb(0, 128, 0)':
+							$('#'+($('select').val())).removeClass('green');
+							break;
+						default:
+							break;
+					}
+
+					$color = '';
+					
+					switch ($(this).val()) {
+						case 'blue':
+							$('#'+($('select').val())).addClass('blue');
+							$color = 'Blue';
+							break;
+						case 'red':
+							$('#'+($('select').val())).addClass('red');
+							$color = 'Red';
+							break;
+						case 'green':
+							$('#'+($('select').val())).addClass('green');
+							$color = 'Green';
+							break;
+					}
+					
+					$('button').focus();
+
+					$('p').before($color);
+				});
+
+				$('#wave').click(function() {
+					$time = new Date().getTime();
+					$(this).data("time", {time: 'now', newtime: new Date().getTime()});
+					$('h3').after($(this).data("time").newtime);
+					$('#1').fadeOut(200, function(){});
+						$('#1').fadeIn(200, function(){}).delay(400);
+						$('#2').delay(200).fadeOut(200, function(){});
+						$('#2').delay(200).fadeIn(200, function(){});
+						$('#3').delay(400).fadeOut(200, function(){});
+						$('#3').delay(200).fadeIn(200, function(){});
+						$('#4').delay(600).fadeOut(200, function(){});
+						$('#4').delay(200).fadeIn(200, function(){});
+				});
+
+				$('#change').click(function() {
+					$('i').text(function() {
+						return $('#text').val();
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Click on <i>this</i> to begin editing <span style="font-size:14px">(notice that when you click the italicized text, the NEW TRIANGLE button gains focus)<span></h1>
+		<h4>List of colors:</h4>
+		<p>Triangle</p>
+		<ul id="collection">
+			<li class="triangle" id="1"></li>
+		</ul>
+		<button id="new">
+			NEW TRIANGLE
+		</button>
+		<select>
+			<option value="1">1</option>
+		</select>
+		<div class="form">
+			<input type="radio" name="color" value="red">Red
+			<input type="radio" name="color" value="blue">Blue
+			<input type="radio" name="color" value="green">Green
+		</div>
+		<button id="wave">IN N OUT</button>
+		<h2>Change the italicized text!</h2>
+		<textarea id="text"></textarea>
+		<button id="change">Change Text</button>
+		<h3>Data: </h3>
+	</body>
+</html>

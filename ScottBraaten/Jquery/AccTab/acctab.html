@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+		<script>
+			$(function() {
+				$('#wrapper').accordion();
+				$('#tabs').tabs();
+				$('#slider').slider();
+			})
+		</script>
+	</head>
+	<body>
+		<div id="slider" style="background-color: grey;">
+		</div>
+		<div id="wrapper">
+			<h1>One</h1>
+			<div>
+				<p>ONE</p>
+			</div>
+			<h1>Two</h1>
+			<div>
+				<p>TWO</p>
+			</div>
+			<h1>Three</h1>
+			<div>
+				<p>THREE</p>
+			</div>
+		</div>
+		<div id="tabs">
+			<ul>
+				<li><a href="#1">One</a></li>
+				<li><a href="#2">Two</a></li>
+				<li><a href="#3">Three</a></li>
+			</ul>
+			<div id="1"><p>Ones</p></div>
+			<div id="2"><p>Twos</p></div>
+			<div id="3"><p>Threes</p></div>
+		</div>
+		
+	</body>
+</html>

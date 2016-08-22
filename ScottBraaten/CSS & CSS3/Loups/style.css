@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Opal');
+
+* {
+	font-family: "Times New Roman";
+}
+
+div {
+	margin-left: 12.5px;
+	border-radius: 20px;
+}
+
+.backdrop {
+	width: 970px;
+	background-color: #F5F5F5;
+	padding-bottom: 20px;
+	border-radius: 0px;
+}
+
+.header {
+	background-color: #DCDCDC;
+	display: block;
+	margin-bottom: 40px;
+	margin-right: 40px;
+	top: 12.5px;
+	padding-top: 0px;
+	padding-left: 12.5px;
+	height: 75px;
+	position: relative;
+}
+
+.header h1 {
+	position: relative;
+	top: 20px;
+}
+
+.menu {
+	background-color: #DCDCDC;
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 10px;
+}
+
+.menu li a, .menu a {
+	margin: 0 0 2px 0;
+	text-decoration: none;
+}
+
+.feed {
+	background-color: darkgrey;
+	display: inline-block;
+	width: 620px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.feed li {
+	margin: 0 0 10px 0;
+}
+
+.contact {
+	background-color: #DCDCDC;
+	margin-right: 40px;
+	height: 70px;
+	padding-left: 20px;
+}
+
+#less li {
+	position: relative;
+	right: 25px;
+}
+
+#one {
+	position: relative;
+	top: 16px;
+}
+
+#two {
+	position: relative;
+	bottom: 0px;
+}
+
+#home {
+	position: relative;
+	top: 13px;
+	left: 20px;
+}
+
+#pressed {
+	color: red;
+}

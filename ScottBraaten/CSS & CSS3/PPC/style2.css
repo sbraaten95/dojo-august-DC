@@ -1,0 +1,298 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	width: 100%;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#header {
+	background: linear-gradient(#DCDCDC, white, white);
+	width: 100%;
+}
+
+	#header img {
+		width: 30%;
+	}
+
+	#header h2 {
+		display: inline-block;
+		text-align: right;
+		width: 65%;
+		vertical-align: top;
+		padding-top: 1.2em;
+	}
+
+#navbar {
+	background: linear-gradient(#DBE1E6, silver, #DBE1E6);
+	width: 100%;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: grey;
+	border-top: 1px solid grey;
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+	#navbar li {
+		display: inline-block;
+		width: 13%;
+		border-left: 1px solid white;
+		border-right: 1px solid darkgrey;
+		text-align: center;
+	}
+
+		#navbar li:first-child {
+			border-left: none;
+		}
+
+		#navbar li:last-child {
+			border-right: none;
+			padding-left: 1%;
+		}
+
+#main_content {
+	background: linear-gradient(to right, black, dimgray, black);
+	width: 100%;
+	padding-left: 0.5em;
+	padding-top: 0.75em;
+	color:white;
+	padding-left: 13%
+}
+
+	#main_content img {
+		vertical-align: top;
+		width: 35%;
+	}
+
+	#main_content div {
+		width: 36%;
+		display: inline-block;
+		font-size: 0.75em;
+	}
+
+#bordered {
+	border: 4px solid white;
+}
+
+#about {
+	margin-left: 15px;
+	background-color: grey;
+	padding-bottom: 4em;
+}
+
+#gold {
+	background-color: gold;
+	margin-top: 0;
+	color: black;
+	padding: 0.5em;
+	text-align: center;
+	font-size: 3em;
+}
+
+#about p, #reg {
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-size: 1.3em;
+}
+
+#middle {
+	padding-bottom: 4em;
+}
+
+	#middle img {
+		display: inline-block;
+	}
+
+
+	#middle h5 {
+		background-color: gold;
+		display: inline-block;
+		vertical-align: top;
+		color: black;
+		font-size: 1em;
+		padding: 1em;
+	}
+
+#whole {
+	margin-top: 0;
+	color: black;
+	padding-left: 3em;
+	padding-bottom: 5em;
+}
+
+	#whole img {
+		width: 278%;
+	}
+
+	#whole li {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 0.3em;
+		margin-right: 0.3em;
+		width: 16.3%;
+		background-color: white;
+		border: 2px solid black;
+		padding-bottom: 2em;
+		height: 15em;
+	}
+
+		#whole li h4 {
+			background-color: gold;
+			width: 278%;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			margin-top: 0;
+			margin-bottom: 0;
+			position: relative;
+			text-indent: 1em;
+			border-bottom: #DCDCDC;
+		}
+
+		#whole li p {
+			width: 270%;
+			padding: 0.5em;
+		}
+
+.readmore {
+	margin-top: 10%;
+	background-color: gold;
+	display: inline-block;
+	margin-left: 100%;
+	padding: 10px;
+	border: 2px solid black;
+	text-align: center;
+}
+
+.triangle {
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+	border-left: 13px solid gold;
+	display: inline-block;
+}
+
+@media screen and (max-width: 1000px) {
+	#main_content img {
+		display: block;
+		width: 40%;
+		margin: auto;
+		margin-right: 60%;
+	}
+	#about {
+		width: 100%;
+		margin-top: 5%;
+		margin-left: 0;
+		padding-right: 10%;
+	}
+
+	#gold {
+		width: 114%;
+	} 
+
+	#about p {
+		width: 120%;
+		vertical-align: middle;
+	}
+
+	#middle {
+		position: fixed;
+		bottom: 50%;
+		left: 60%;
+		margin-left: 1%;
+	}
+
+	#middle img {
+		width: 100%;
+	}
+
+	#whole {
+		padding-left: 0;
+		padding-top: 5%;
+	}
+
+	#whole li {
+		display: block;
+		width: 30%;
+		height: 5%;
+		margin-bottom: 5%;
+	}
+
+	#whole img {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#gold {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	* {
+		display: block;
+
+	}
+
+	#header h2 {
+		font-size: 1em;
+	}
+
+	#main_content img {
+		width: 72%;
+	}
+
+	#about {
+		width: 200%;
+		padding-right: 20%;
+		padding-left: 8%;
+		margin-bottom: 5%;
+		margin-left: 5%;
+	}
+
+	#about p, #req {
+		font-size: 1em;
+	}
+
+	#middle {
+		position: static;
+		width: 10%;
+	}
+
+	#middle img {
+		width: 200%;
+		margin-right: 5%;
+		float: left;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	#middle h5 {
+		margin-left: 10%;
+		width: 160%;
+	}
+
+	#whole {
+		display: block;
+	}
+
+	#whole li {
+		width: 70%;
+	}
+
+	#whole img {
+		width: 277%;
+		margin-left: 0;
+	}
+
+	#whole li h4 {
+		text-align: center;
+	}
+}

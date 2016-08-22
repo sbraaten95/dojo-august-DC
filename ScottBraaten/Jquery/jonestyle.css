@@ -1,0 +1,61 @@
+h1 {
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+#collection {
+	margin: 0 auto;
+
+}
+
+.triangle {
+	width: 50px;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-top: 40px solid transparent;
+	border-right: 40px solid black;
+	margin: auto;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.form {
+	margin: auto;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+button {
+	margin: auto;
+	text-align: center;
+}
+
+.red {
+	border-right: 40px solid red;
+}
+
+.blue {
+	border-right: 40px solid blue;
+}
+
+.green {
+	border-right: 40px solid green;
+}
+
+h2 {
+	margin-top: 40px;
+}
+
+h4 {
+	display: inline-block;
+}
+
+#text {
+	display: block;
+}
+
+#change {
+	display: block;
+	margin: 0;
+}

@@ -1,0 +1,145 @@
+@import 'https://fonts.googleapis.com/css?family=Nova+Oval';
+
+* {
+	font-family: Helvetica;
+}
+
+#backdrop {
+	width: 970px;
+}
+
+#top {
+	width: 970px;
+	background-color: Brown;
+	border-bottom: 1px solid black;
+	margin-bottom: 0;
+}
+
+#top-one {
+	display: inline-block;
+	width: 550px;
+	height: 80px;
+}
+
+#top-one img {
+	display: inline;
+	vertical-align: middle;
+	position: relative;
+	left: 50px;
+}
+
+#top-one h2 {
+	display: inline;
+	vertical-align: middle;
+	font-family: 'Nova Oval';
+	color: white;
+	position: relative;
+	left: 50px;
+	top: 10px;
+}
+
+#top-two {
+	display: inline-block;
+	width: 400px;
+	vertical-align: middle;
+}
+
+#top-two a {
+	color: gold;
+}
+
+#texts {
+	vertical-align: inherit;
+	display: inline;
+	text-align: right;
+	position: relative;
+	left: 100px;
+	font-size: 12px;
+}
+
+.bordered {
+	margin-left: 5px;
+	border-left: 1px solid white;
+	padding-left: 5px;
+}
+
+#submit {
+	position: relative;
+	left: 155px;
+	top: 10px;
+}
+
+#submit label {
+	color: white;
+	border: 1px solid white;
+	position: relative;
+	bottom: 5px;
+	font-size: 12px;
+}
+
+#tabs {
+	list-style-type: none;
+	display: inline-block;
+	background-color: #F5F5F5;
+	width: 930px;
+	border-bottom: 1px solid grey;
+	margin-top: 0;
+}
+
+#tabs li {
+	display: inline-block;
+	border-right: 1px solid grey;
+	padding-right: 13px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#menu {
+	width: 180px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #DCDCDC;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+	border: 1px solid Silver;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#menu li {
+	margin-bottom: 3px;
+	color: Brown;
+	text-decoration: underline;
+}
+
+#content {
+	display: inline-block;
+	width: 690px;
+}
+
+#content h2, #content h4 {
+	color: Brown;
+}
+
+#content a {
+	color: Brown;
+}
+
+#topbor {
+	border-top: 3px solid grey;
+	padding-top: 20px;
+}
+
+#firstul {
+	border-bottom: 3px solid grey;
+	padding-bottom: 8px;
+}
+
+textarea {
+	resize: none;
+	height: 15px;
+}

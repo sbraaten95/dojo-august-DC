@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$index = 0;
+
+				$('img').click(function() {
+					$newpicture = '';
+					$index= Math.floor(Math.random()*10);
+					switch ($index) {
+						case 0:
+							$newpicture = 'cat0.png';
+							break;
+						case 1:
+							$newpicture = 'cat1.png';
+							break;
+						case 2:
+							$newpicture = 'cat2.png';
+							break;
+						case 3:
+							$newpicture = 'cat3.png';
+							break;
+						case 4:
+							$newpicture = 'cat4.png';
+							break;
+						case 5:
+							$newpicture = 'ninja0.png';
+							break;
+						case 6:
+							$newpicture = 'ninja1.png';
+							break;
+						case 7:
+							$newpicture = 'ninja2.png';
+							break;
+						case 8:
+							$newpicture = 'ninja3.png';
+							break;
+						case 9:
+							$newpicture = 'ninja4.png';
+							break;
+					}
+
+					$(this).attr('src', $newpicture);
+				});
+
+			});
+		</script>
+		<script src="stuff.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<ul>
+				<li>
+					<img src="cat0.png">
+				</li>
+				<li>
+					<img src="ninja1.png">
+				</li>
+				<li>
+					<img src="cat2.png">
+				</li>
+				<li>
+					<img src="ninja3.png">
+				</li>
+				<li>
+					<img src="cat4.png">
+				</li>
+			</ul>
+			<h1></h1>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+#playground {
+	width: 900px;
+	height: 900px;
+}
+
+#sphere {
+	background-color: blue;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	margin-bottom: 150px;
+}
+
+#triangle {
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+	position: relative;
+	margin-left: 150px;
+	margin: auto;
+	display: inline-block;
+}
+
+#knife0 {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	background-color: white;
+	transform: rotate(55deg);
+	left: 50px;
+	bottom: 21px;
+}
+
+#knife1 {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	background-color: white;
+	transform: rotate(-55deg);
+	right: 50px;
+	bottom: 21px;
+}
+
+#pacman {
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	margin: auto;
+}
+
+#knife3 {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	bottom: 50px;
+	left: 90px;
+	background-color: white;
+	transform: rotate(45deg);
+}

@@ -1,0 +1,70 @@
+
+div{
+	height:100px;
+	width:100px;
+	border:1px solid black;	
+	display:inline-block;
+	margin:none;
+}
+.square {
+	height:220px;
+	width:220px;
+	border:none;
+	vertical-align: bottom;
+}
+.half{
+	display: block;
+	height: 220px;
+	width:440px;
+	border:none;
+}
+.long{
+	width: 210px;
+}
+.tall {
+	width: 100px;
+	height: 200px;
+}
+#align_top{
+	vertical-align: top;
+}
+.sm-base{
+	height:45px;
+	width:45px;
+}
+.sm-tall{
+	height:90px;
+	width:45px;
+}
+.sm-long{
+	height:45px;
+	width:90px;
+}
+.sm-square{
+	height:100px;
+	width:100px;
+	border:none;
+	display: inline-block;
+}
+.wrapper{
+	height:auto;
+	width:auto;
+	border:1px solid red;	
+	padding: 5px;
+}
+/*SASS*/
+.container {
+	border: 1px solid black;
+	.row {
+		border: 2px solid black;
+	}
+}
+
+
+/*CSS*/
+.container {
+	border: 1px solid black;
+}
+.container .row{
+	border: 2px solid black;
+}

@@ -1,0 +1,275 @@
+* {  
+	vertical-align: baseline;  
+	font-family: inherit;  
+	font-style: inherit;  
+	font-size: 100%;  
+	border: none;  
+	padding: 0;  
+	margin: 0;  
+	}  
+body {  
+	padding: 5px;  
+	}
+p, pre, blockquote, form, ul, ol, dl {  
+	margin: 20px 0;  
+	}    
+li, dd, blockquote {  
+	margin-left: 40px;  
+	}  
+table {  
+	border-collapse: collapse;  
+	border-spacing: 0;  
+	}
+/*Siolon's Gobal Rest from https://perishablepress.com/a-killer-collection-of-global-css-reset-styles/*/
+
+body {
+	padding: 0px;
+	width: 1000px;
+}
+a {
+	color: rgb(0, 125, 190);
+}
+hr {
+	border-style: inset;
+    border-width: 1px;
+}
+.bold {
+	font-weight: bold;
+}
+.grey{
+	color: grey;
+}
+.blue{
+	color: rgb(0, 125, 190);
+}
+.button {
+	border-radius: 5px;
+}
+#navi {
+	list-style: none;
+	margin: 0px 0px 0px 550px;
+	padding: 0px 7px 7px 15px;
+	display: inline-block;
+	background: linear-gradient(white, rgb(250, 250, 250));
+	border-radius: 0px 0px 5px 5px;
+	border: solid 1px #e6e6e6;
+}
+#navi li {
+	display: inline;
+	margin: 0px 0px -2px 0px;
+	padding: 0px 8px 0px 3px;
+	border-right: 1px solid #a6a6a6;
+}
+#navi li:last-child{
+	border:	none;
+}
+#navi li a{
+	text-decoration: none;
+	color: grey;
+	font-size: .7em;
+	vertical-align: top;
+}
+#top .login {
+	height: 22px;
+	width: 60px;
+	margin-left: 15px;
+	vertical-align: top;
+	background: linear-gradient(rgb(59, 194, 250), rgb(0, 142, 202), rgb(0, 125, 183));
+	text-align: top;
+	color: white;
+	font-size: .75em;
+}
+#top img {
+	display: inline-block;
+}
+#top h1 {
+	display: inline-block;
+	vertical-align: top;
+	height: 60px;
+	margin: 0px;
+}
+#top h1 span {
+	font-size: 40px;
+	font-weight: normal;
+}
+#body {
+	background: linear-gradient(rgb(232, 232 ,232), white, white, white, white)
+}
+#body h1 {
+	margin: 10px 0px 0px 0px;
+	height: 45px;
+	color: white;
+	padding-top: 12px;
+	padding-left: 10px;
+	background-color: rgb(0, 125, 190);
+	font-size: 25px;
+	font-weight: normal;
+}
+#body_side {
+	display: inline-block;
+	padding: 0px 10px;
+	width: 240px;
+	vertical-align: top;
+}
+#body_side_top {
+	margin-top: 50px;
+}
+#body_side_top h4 {
+	margin: 10px 0px;
+	font-size: 1.15em;
+}
+#body_side_top h5 {
+	font-size: .8em;
+	color: #b30000;
+}
+#body_side_top p {
+	margin: 0px 0px 15px 0px;
+	font-size: .8em;
+}
+#body_side_top a {
+	text-decoration: none;
+}
+#body_side_top .button {
+	width: 240px;
+	height: 32px;
+	margin: 3px 0px;
+	font-weight: bold;
+	color: white;
+}
+#body_side_top .demo {
+	background: linear-gradient(rgb(45, 156, 211), rgb(5, 131, 192))
+}
+#body_side_top .trial {
+	background: linear-gradient(rgb(245, 164, 82), rgb(230, 68, 3))
+}
+#body_side_top h6 {
+	font-weight: normal;
+	font-size: .8em;
+	text-align: center;
+}
+#body_side_top hr {
+	margin: 10px 0px 15px 0px;
+}
+#body_side_bot {
+	width: 198px;
+	height: 241px;
+	background-image: url(left_content_ad.png);
+	background-size: 100% 100%;
+	padding: 10px;
+}
+#body_side_bot h4 {
+	font-size: 1.1em;
+}
+#body_side_bot p {
+	margin: 8px 0px;
+	font-size: .8em;
+	font-weight: bold;
+}
+#body_side_bot .today {
+	background: linear-gradient(rgb(43, 116, 167), rgb(12, 61, 94));
+	color: white;
+	width: 170px;
+	font-size: .8em;
+	padding: 3px 0px;
+	margin: 7px 12px;
+}
+#body_side_bot .blue1 {
+	color: rgb(86, 148, 185);
+}
+#body_side_bot .blue2 {
+	color: rgb(154, 195, 217);
+}
+#body_main {
+	display: inline-block;
+	margin: 20px 0px 0px 20px; 
+	width: 680px;
+	font-size: .73em;
+}
+#body_main p {
+	margin: 12px 0px;
+}
+#home_button {
+	display: inline-block;
+}
+#home_pcc {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px;
+	font-size: 1.25em;
+}
+#body_main_topright {
+	display: inline-block;
+	vertical-align: top;
+}
+#body_main_topright img {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 425px;
+}
+#contact_info {
+	display: inline-block;
+	vertical-align: text-top;
+}
+#contact_info p {
+	margin: 0px;
+	font-size: .65em;
+	color: grey;	
+}
+#contact_info h5 {
+	margin: 0px;
+	color: rgb(47, 174, 225);
+	font-weight: bolder;
+	font-size: 1.8em;
+}
+#body_main hr {
+	margin: 10px 0px;
+}
+#body_main h2 {
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+#body_main ul{
+	list-style-type: square;
+	color: rgb(0, 125, 182);
+	margin: 15px 0px;
+}
+#body_main ul .black{
+	color: black;
+}
+#body_main li{
+	margin-left: 16px;
+	margin-bottom: 5px;
+}
+#main_ad {
+	border: solid 5px rgb(127, 187, 213);
+	margin-right: 30px;
+	margin-bottom: 10px;
+	padding: 0pxs 5px;
+}
+#main_ad img {
+	display: inline-block;
+	vertical-align: top;
+}
+#ad_text {
+	display: inline-block;
+	vertical-align: top;
+	width: 560px;
+}
+#ad_text p {
+	margin: 5px 2px;
+	font-size: 1.2em;
+}
+#ad_text .greenToday {
+	margin: 5px 2px;
+	color: white;
+	background: linear-gradient(rgb(170, 200, 110), rgb(197, 223, 126), rgb(144, 180, 54), rgb(144, 180, 54), rgb(186, 210, 60), rgb(170, 200, 110));
+	border: 1px solid rgb(100, 124, 72);
+	width: 170px;
+	height: 35px;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-bottom: 2px;
+}
+#body_main h3 {
+	font-size: 1.2em;
+}

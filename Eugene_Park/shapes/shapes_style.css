@@ -1,0 +1,49 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#square {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	margin-bottom: 50px;
+}
+#circle {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	border-radius: 50%;
+	margin-bottom: 50px;
+}
+#up_triangle {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+	#t_square1 {
+		width: 120px;
+		height: 120px;
+		background: white;
+		transform: translate(-85px, -38px) rotate(30deg);
+	}
+	#t_square2 {
+		width: 120px;
+		height: 120px;
+		background: white;
+		transform: rotate(-30deg) translate(135px, -108px);
+	}
+#Pacman {
+	width: 100px;
+	height: 100px;
+	background: blue;
+	border-radius: 50%;
+	margin-bottom: 50px;
+}
+	#mouth {
+		width: 50px;
+		height: 50px;
+		background: white;
+		transform: rotate(45deg) translate(62px, -25px);
+	}

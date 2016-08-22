@@ -1,0 +1,243 @@
+* {
+	/*padding-left: 10px;*/
+}
+#wrapper {
+	height: 1000px;
+	width: 900px;
+}
+#header {
+	height: 170px;
+	width: 900px;
+}
+#ad {
+	height: 830px;
+	width: 200px;
+	display: inline-block;
+	vertical-align:	top;
+}
+#wordstream_ppc {
+	color: blue;
+	font-size: 20px;
+}
+#profits_ppc {
+	color: red;
+	font-size: 12px;
+	font-weight: bold;
+}
+#schedule_demo {
+	height: 40px;
+	width: 180px;
+	background: linear-gradient(#4d4dff, #0000ff);
+	border: 10px;
+	border-radius: 25px;
+	padding-bottom: 4px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	line-height: 90%;
+}
+#free_trial {
+	height: 40px;
+	width: 180px;
+	background: linear-gradient(#ffff66, #ffa31a);
+	border: 10px;
+	border-radius: 25px;
+	padding-bottom: 4px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	line-height: 90%;
+}
+#credit {
+	text-align: center;
+}
+#body_header1 p {
+	color: blue;
+	display: inline-block;
+	position: relative;
+	bottom: 5px;
+
+}
+#body_header {
+	height: 73px;
+	width: 720px;
+	background: linear-gradient(#d9d9d9, #ffffff);
+	display: inline-block;
+	padding-left: 180px;
+	padding-top: 16px;
+}
+#contact_info img {
+	padding-bottom: 15px;
+}
+p ul li {
+	list-style-type: square;
+}
+#body h2 {
+	color: #3385ff;
+}
+#ppc {
+	color: blue;
+	display: inline-block;
+	text-align: center;
+}
+#body_header1 {
+	display: inline-block;
+}
+.contact {
+	display: inline-block;
+}
+.big_number {
+	display: inline-block;
+}
+#contact_info {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	left: 400px;
+	bottom: 22px;
+	color: gray;
+}
+#number {
+	color: #1aa3ff;
+	font-size: 30px;
+
+}
+#body {
+	height: 597px;
+	width: 696px;
+	display: inline-block;
+	/*padding-left: 10px;*/
+}
+#nav {
+	height:40px;
+	width:900px;
+}
+#navbarlist {
+	/*width: 290px;*/
+	color: gray;
+	border-style: ridge;
+	border-radius: 5px;
+	font-size: 11px;
+}
+#ad2 {
+	width: 600px;
+	height: 217px;
+	border-style: solid;
+	border-color: #1aa3ff;
+	border-width: 8px;
+	position: relative;
+	left: 40px;
+}
+#ad_message3 {
+	height: 30px;
+	width: 180px;
+	display: inline-block;
+	background: linear-gradient(#4d4dff, #0000ff);
+	text-align: center;
+	color: white;
+	font-size: 12px;
+	border-style: solid;
+	border-radius: 10px;
+	line-height: 220%;
+
+}
+#get_started1 {
+	width:200px;
+	height:50px;
+	background: linear-gradient(#00b300, #003300, #00b300);
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+	line-height: 220%;
+	border-style: 1px solid;
+	border-radius: 10px;
+
+}
+#ad2 p {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	left: 100px;
+	bottom: 80px;
+
+}
+h3 {
+	display: inline-block;
+	vertical-align: top;
+	color: #1aa3ff;
+	font-weight: bold;
+	}
+#logo1 {
+	height: 70px;
+	width: 900px;
+	position: relative;
+	bottom: 20px;
+	
+}
+#wordstream {
+	height:	45px;
+	width: 220px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;	
+	top: 14px;
+	left: 6px;
+}
+#word {
+	color: gray;
+	display: inline-block;
+	font-size: 40px;
+}
+#stream {
+	color: blue;
+	display: inline-block;
+	font-size: 40px;
+}
+#submit {
+	background: linear-gradient(#4d4dff, #0000ff);
+	color: white;
+}
+#slogan {
+	height: 60px;
+	width: 900px;
+	background: linear-gradient(#0052cc, #4d94ff, #0052cc);
+	font-size: 25px;
+}
+#slogan_text {
+	color: white;
+	position: relative;
+	top: 14px;
+}
+#navbar {
+	height: 20px;
+	width: 700px;
+	padding-left: 530px;
+	background-color: white;
+}
+#navbarlist {
+	height: 10px;
+	width: 270px;
+	list-style-type: none;
+	vertical-align: top;
+	display: inline-block;
+	margin: 1px;
+}
+#submit {
+	display: inline-block;
+	vertical-align: top;
+}
+#corner_ad {
+	height: 300px;
+	width: 200px;
+	background-image: url("left_content_ad.png");
+	background-size: cover;
+	border: 1px solid;
+}
+
+li {
+	display: inline-block;
+}
+hr {
+	border-bottom: 1px solid #f5f5f5;
+}

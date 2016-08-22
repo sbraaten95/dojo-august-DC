@@ -1,0 +1,136 @@
+#wrapper {
+	height: 1100px;
+	width: 1100px;
+}
+#header {
+	height: 130px;
+	width: 1100px;
+	background-color: #f2f2f2;
+}
+#body {
+	height: 750px;
+	width: 1100px;
+	background: linear-gradient(to right, #0d0d0d, #595959, #0d0d0d);
+}
+#logo {
+	display: inline-block;
+}
+#phone {
+	display: inline-block;
+	margin-left: 300px;
+	margin-top: 35px;
+	vertical-align: top;
+	font-weight: bold;
+}
+#nav {
+	height: 60px;
+	width: 1100px;
+	background-color: linear-gradient(#d9d9d9, #b3b3b3, #d9d9d9);
+	vertical-align: top;
+	display: inline-block;
+	border-top-style: groove;
+	color: gray;
+
+}
+#picture {
+	height: 250px;
+	width: 350px;
+	padding-left: 15px;
+	padding-top: 30px;
+	display: inline-block;
+}
+#about {
+	height: 280px;
+	width: 680px;
+	display: inline-block;
+	margin-left: 40px;
+	margin-top: 30px;
+	background: linear-gradient(to right, #8c8c8c, #262626);
+	font-family: "Times New Roman", Times, serif;
+	vertical-align: top;
+}
+#inbetween {
+	margin-left: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: yellow;
+}
+#title_contents {
+	padding: 15px;
+}
+#automotive {
+	height:350px;
+	width: 250px;
+	background-color: #f2f2f2;
+	margin-left: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+#commercial {
+	height: 350px;
+	width: 250px;
+	background-color: #f2f2f2;
+	margin-left: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+#industrial {
+	height: 350px;
+	width: 250px;
+	background-color: #f2f2f2;
+	margin-left: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+#diesel {
+	height: 350px;
+	width: 250px;
+	background-color: #f2f2f2;
+	margin-left: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#title_automotive {
+	height: 30px;
+}
+#p_title {
+	color: white;
+}
+.titles {
+	background: linear-gradient(yellow, orange);
+	font-weight: bold;
+	height: 30px;
+	padding-top: 10px;
+	padding-left: 15px;
+}
+.p_description {
+	padding: 15px;
+}
+li {
+	display: inline;
+	list-style-type: none;
+	font-weight: bold;
+	border-left: solid;
+	border-top-style: solid;
+	border-left-width: 1px;
+	border-top-width: 1px;
+	top: 50%;
+	padding-top: 22px;
+	padding-bottom: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-color: gray;
+}
+
+ul {
+	padding: 5px;
+	padding-left: 60px;
+}
+
+#last_li {
+	border-right: solid;
+	border-right-width: 1px;
+	font-weight: bold;
+	border-color: gray;
+}

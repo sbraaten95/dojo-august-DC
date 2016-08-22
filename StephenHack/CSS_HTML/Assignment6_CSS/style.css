@@ -1,0 +1,42 @@
+#square {
+	width: 140px;
+	height: 140px;
+	background-color: blue;
+}
+#circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: red;
+
+}
+#up_triangle {
+	margin-left: 30px;
+	width: 200px;
+	height: 200px;
+	transform: rotate(45deg);
+	background-color: black;
+}
+#down_triangle {
+	margin-left: -8px;
+	width: 300px;
+	height: 200px;
+	background-color: white;
+	position: relative;
+	bottom: 100px;
+}
+#pacman {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: green;
+}
+#pacmouth {
+	width: 200px;
+	height: 200px;
+	background-color: white;
+	transform: rotate(45deg);
+	position: relative;
+	bottom: 200px;
+	left: 136px;
+}

@@ -8,13 +8,23 @@
 		$(document).ready(function() {
 			var prefix = '';
 
+			$('input[name="ok"]').hide();
+
+			$('input[value="lat_long"]').focus(function() {
+				$('input[name="ok"]').show();
+			})
+
+			$('input[value="city_name"], input[value="zip"], input[value="city_id"]').click(function() {
+				$('input[name="ok"]').hide();
+			})
+
 			$('form').submit(function() {
-				var customUrl = '';
+				var customUrl = '"http://api.openweathermap.org/data/2.5/weather?"';
 				if($('input[name="type"]:checked').val() == 'lat_long') {
-					customUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + $('input[value="lat"]').val() + '&lon=' + $('input[value="lon"]').val() + "&appid=38ed520286ab541243ddee4e7fe64fab";
+					customUrl += "lat=" + $('input[value="lat"]').val() + '&lon=' + $('input[value="lon"]').val() + "&appid=38ed520286ab541243ddee4e7fe64fab";
 					console.log(customUrl);
 				}else {
-					customUrl = "http://api.openweathermap.org/data/2.5/weather?" + $('input[name="type"]:checked').attr('sky') + $('input[name="city"]').val() + "&appid=38ed520286ab541243ddee4e7fe64fab"
+					customUrl += $('input[name="type"]:checked').attr('sky') + $('input[name="city"]').val() + "&appid=38ed520286ab541243ddee4e7fe64fab"
 				}
 
 				$.ajax({
@@ -42,7 +52,7 @@
 			<input type="radio" name="type" value="zip" sky="zip=">Zip Code
 			<input type="radio" name="type" value="city_id" sky="id=">City ID<br>
 			<label>City: </label><input type="text" name="city" id="cityid"><br>
-			<label>Latitude</label><input type="text" value="lat"><label>Longitude</label><input type="text" value="lon"><br>
+			<label>Latitude</label><input type="text" name="ok" value="lat"><label>Longitude</label><input type="text" name="ok" value="lon"><br>
 			<input type="submit">
 		</form>
 		<h3 id="loc">Location: </h3>

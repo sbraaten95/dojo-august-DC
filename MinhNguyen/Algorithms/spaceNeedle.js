@@ -1,3 +1,8 @@
+// 1. decide what event listener you need//if neccessary
+// 2. write the callback function
+// 3. test and rewrite
+
+
 function topDome(){
 	/*
 	         __/||\__

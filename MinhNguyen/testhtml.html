@@ -6,25 +6,21 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js">
 	</script>
 	<script type="text/javascript">
-console.log("                   /\\")
-for (var i = 0; i < 4; i++) {
-	console.log("                   ||")
-}
 	$(document).ready(function(){
-		alert("ready");
-		$('#testinginput').focus()
+		$.ajax({
+		  url: "http://api.openweathermap.org/data/2.5/weather?q=tysonscorner&appid=38ed520286ab541243ddee4e7fe64fab",
+		  method: "GET",
+		}).done(function(anything) {
+		  console.log("object:", anything)
+		  console.log("weather", anything.weather)
+		  console.log("weather[0]", anything.weather[0])
+		  console.log("weather[0] description", anything.weather[0].description)
+		});
 	})
 	console.log("document is not ready here")
 
-	function greeting(callback){
-		console.log("hello class");
-		callback()
-	}
 
-	function degreet(){
-		console.log("goodbye class")
-	}
-	greeting(degreet)
+
 
 	</script>
 </head>

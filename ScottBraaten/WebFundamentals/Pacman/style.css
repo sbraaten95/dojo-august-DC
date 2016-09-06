@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: black;
+}
+
+div.wall, div.brick {
+	background-color: blue;
+}
+
+div.row div {
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	display: inline-block;
+}
+
+div.coin {
+	background: url('coin.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*
+52 top and 35 left are beginning positions.
+
+61 left is next position. Difference is 26.
+*/
+
+div#pacman {
+	background: url('pacman.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 27px;
+	left: 28px;
+}
+
+div#pacman2 {
+	background: url('pacman.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 210px;
+	left: 340px;
+}
+
+div#world {
+	position: relative;
+}
+
+div.ghost {
+	background: url('ghost.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 27px;
+	left: 338px;
+}
+
+div#empty {
+	width: 20px;
+	height: 20px;
+}
+
+button {
+	background-color: white;
+	margin-top: 300px;
+}

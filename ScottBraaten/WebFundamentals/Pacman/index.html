@@ -1,0 +1,362 @@
+<html>
+<head>
+	<title>Pacman Demo - Scott Braaten Aug 2016</title>
+	<link rel="stylesheet" href="style.css">
+	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'>
+	</script>
+</head>
+<body>
+
+	<div id="world"></div>
+	<div id="pacman"></div>
+	<div id="pacman2"></div>
+	<div class="ghost"></div>
+
+	<script>
+	/*
+	GLOBAL VARIABLES
+	*/
+	var world = [
+		[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+		[2,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+		[2,1,3,3,3,3,1,1,1,3,3,3,3,1,2],
+		[2,1,3,1,1,1,1,1,1,1,1,1,3,1,2],
+		[2,1,1,1,3,3,3,3,3,3,3,1,1,1,2],
+		[2,1,1,1,3,3,3,3,3,3,3,1,1,1,2],
+		[2,1,3,1,1,1,1,1,1,1,1,1,3,1,2],
+		[2,1,3,3,3,3,1,1,1,3,3,3,3,1,2],
+		[2,1,1,1,1,1,1,1,1,1,1,1,1,1,2],
+		[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+	];
+
+	var blockPos = [];
+	var coinPos = [];
+	var posIndic = [1,1];
+	var posIndic2 = [8,13]
+	var ghostPosIndic = [1,13];
+	var mistakeList = [0,0,0,0];
+	var searchStore = [];
+	var xdiff = 0;
+	var ydiff = 0;
+
+	/*
+	SEQUENCE OF FUNCTION
+	*/
+
+	displayWorld();
+	eatCoin(posIndic);
+
+
+	/*
+	IMPLEMENTED FUNCTIONS
+	*/
+
+	function displayWorld() {
+		var output = '';
+		var idCount = 0;
+
+		for (var i = 0; i < world.length; i++) {
+			output += "\n<div class='row'>";
+			for (var j = 0; j < world[i].length; j++) {
+				if (world[i][j] == 2) {
+					output += "\n\t<div class='wall'></div>";
+					blockPos.push([i, j]);
+				} else if (world[i][j] == 1) {
+					output += "\n\t<div class='coin' id='" + i + "" + j + "'></div>";
+					coinPos.push([i, j]);
+				} else if (world[i][j] == 3) {
+					output += "\n\t<div class='brick'></div>";
+					blockPos.push([i, j]);
+				} else if (world[i][j] == 0) {
+					output += "\n\t<div class='empty'></div>";
+				}
+			}
+			output += "\n</div>";
+		}
+		document.getElementById('world').innerHTML = output;
+	}
+
+	/*
+	Gets called upon a key press. Reacts to directional buttons.
+	*/
+
+	document.onkeydown = function(e) {
+		console.log(e);
+		var posNum = 0;
+		var store = [];
+		switch (e.keyCode) {
+			case 37:
+				posNum = parseInt($('#pacman').css('left')) - 26;
+				store = posIndic;
+				posIndic = [posIndic[0], posIndic[1] - 1];
+				if (checkSpace(posIndic)) {
+					$('#pacman').css('left', '' + posNum);
+					eatCoin(posIndic);
+					$('#pacman').css('transform', 'rotate(180deg)');
+				} else {
+					posIndic = store;
+				}
+				break;
+			case 38:
+				posNum = parseInt($('#pacman').css('top')) - 26;
+				store = posIndic;
+				posIndic = [posIndic[0] - 1, posIndic[1]];
+				if (checkSpace(posIndic)) {
+					$('#pacman').css('top', '' + posNum);
+					eatCoin(posIndic);
+					$('#pacman').css('transform', 'rotate(270deg)');
+				} else {
+					posIndic = store;
+				}
+				break;
+			case 39:
+				posNum = parseInt($('#pacman').css('left')) + 26;
+				store = posIndic;
+				posIndic = [posIndic[0], posIndic[1] + 1];
+				if (checkSpace(posIndic)) {
+					$('#pacman').css('left', '' + posNum);
+					eatCoin(posIndic);
+					$('#pacman').css('transform', 'rotate(360deg)');
+				} else {
+					posIndic = store;
+				}
+				break;
+			case 40:
+				posNum = parseInt($('#pacman').css('top')) + 26;
+				store = posIndic;
+				posIndic = [posIndic[0] + 1, posIndic[1]];
+				if (checkSpace(posIndic)) {
+					$('#pacman').css('top', '' + posNum);
+					eatCoin(posIndic);
+					$('#pacman').css('transform', 'rotate(90deg)');
+				} else {
+					posIndic = store;
+				}
+				break;
+				// 68, 83, 87, 65
+			case 65:
+				posNum = parseInt($('#pacman2').css('left')) - 26;
+				store = posIndic2;
+				posIndic2 = [posIndic2[0], posIndic2[1] - 1];
+				if (checkSpace(posIndic2)) {
+					$('#pacman2').css('left', '' + posNum);
+					eatCoin(posIndic2);
+					$('#pacman2').css('transform', 'rotate(180deg)');
+				} else {
+					posIndic2 = store;
+				}
+				break;
+			case 87:
+				posNum = parseInt($('#pacman2').css('top')) - 26;
+				store = posIndic2;
+				posIndic2 = [posIndic2[0] - 1, posIndic2[1]];
+				if (checkSpace(posIndic2)) {
+					$('#pacman2').css('top', '' + posNum);
+					eatCoin(posIndic2);
+					$('#pacman2').css('transform', 'rotate(270deg)');
+				} else {
+					posIndic2 = store;
+				}
+				break;
+			case 68:
+				posNum = parseInt($('#pacman2').css('left')) + 26;
+				store = posIndic2;
+				posIndic2 = [posIndic2[0], posIndic2[1] + 1];
+				if (checkSpace(posIndic2)) {
+					$('#pacman2').css('left', '' + posNum);
+					eatCoin(posIndic2);
+					$('#pacman2').css('transform', 'rotate(360deg)');
+				} else {
+					posIndic2 = store;
+				}
+				break;
+			case 83:
+				posNum = parseInt($('#pacman2').css('top')) + 26;
+				store = posIndic2;
+				posIndic2 = [posIndic2[0] + 1, posIndic2[1]];
+				if (checkSpace(posIndic2)) {
+					$('#pacman2').css('top', '' + posNum);
+					eatCoin(posIndic2);
+					$('#pacman2').css('transform', 'rotate(90deg)');
+				} else {
+					posIndic2 = store;
+				}
+				break;
+			default:
+				break;
+		}
+	}
+
+	/*
+	Checks the tile that pacman has been instructed to move to, and determines whether or not pacman can move to this tile.
+	*/
+
+	function checkSpace(posIndic) {
+		for (var i = 0; i < blockPos.length; i++) {
+			if (posIndic[0] == blockPos[i][0] && posIndic[1] == blockPos[i][1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/*
+	Upon movement, enforces the removal of coin image from tile pacman navigates to.
+	*/
+
+	function eatCoin(posIndic) {
+		for (var i = 0; i < coinPos.length; i++) {
+			if (posIndic[0] == coinPos[i][0] && posIndic[1] == coinPos[i][1]) {
+				$('#' + coinPos[i][0] + '' + coinPos[i][1]).css('background', 'none');
+			}
+		}
+	}
+
+	/*
+	Allows for the ghost to move.
+	*/
+
+	var flow = setInterval(function ghostMovement() {
+		var posNum = 0;
+		var pulseHit = true;
+		var dir = Math.floor(Math.random() * 4);
+
+		while (pulseHit) {
+
+			switch (dir) {
+
+				case 0:
+					if (pulseHit && checkSpace([ghostPosIndic[0], ghostPosIndic[1] - 1])) {
+						posNum = parseInt($('.ghost').css('left')) - 26;
+						$('.ghost').css('left', posNum);
+						ghostPosIndic = [ghostPosIndic[0], ghostPosIndic[1] - 1];
+						pulseHit = false;
+					} else {
+						dir = Math.floor(Math.random() * 4);
+					}
+					break;
+				case 1:
+					if (pulseHit && checkSpace([ghostPosIndic[0] - 1, ghostPosIndic[1]])) {
+						posNum = parseInt($('.ghost').css('top')) - 26;
+						$('.ghost').css('top', posNum);
+						ghostPosIndic = [ghostPosIndic[0] - 1, ghostPosIndic[1]];
+						pulseHit = false;
+					} else {
+						dir = Math.floor(Math.random() * 4);
+					}
+					break;
+				case 2:
+					if (pulseHit && checkSpace([ghostPosIndic[0], ghostPosIndic[1] + 1])) {
+						posNum = parseInt($('.ghost').css('left')) + 26;
+						$('.ghost').css('left', posNum);
+						ghostPosIndic = [ghostPosIndic[0], ghostPosIndic[1] + 1];
+						pulseHit = false;
+					} else {
+						dir = Math.floor(Math.random() * 4);
+					}
+					break;
+				case 3:
+					if (pulseHit && checkSpace([ghostPosIndic[0] + 1, ghostPosIndic[1]])) {
+						posNum = parseInt($('.ghost').css('top')) + 26;
+						$('.ghost').css('top', posNum);
+						ghostPosIndic = [ghostPosIndic[0] + 1, ghostPosIndic[1]];
+						pulseHit = false;
+					} else {
+						dir = Math.floor(Math.random() * 4);
+					}
+					break;
+				default:
+					break;
+			}
+		}
+
+		if (posIndic[0] == ghostPosIndic[0] && posIndic[1] == ghostPosIndic[1]) {
+			$('#pacman').css('background', 'none');
+			alert("Game over!");
+			clearInterval(flow);
+			clearInterval(cherry);
+		}
+
+	}, 500);
+
+	var cherry = setInterval(function() {
+		var one = Math.floor(Math.random() * 10)
+		var two = Math.floor(Math.random() * 15)
+		$('.coin[id=' + one
+			+ '' + two + ']').css('background', 'url("cherry.png")');
+	}, 9000);
+
+	var path = function(name){
+		this.name = name;
+		this.input = [];
+	}
+
+	function addInput(input) {
+		path.input += input;
+	}
+
+	function findDirection() {
+		var searchingx = true;
+		var searchingy = true;
+		var xhint = 0;
+		var yhint = 0;
+		var firstPath = new path();
+		var i = 0;
+
+		searchStore = ghostPosIndic;
+		ghostPosIndic = [ghostPosIndic[0], ghostPosIndic[1] - 1];
+
+		while (searchingx || searchingy) {
+
+			xdiff = ghostPosIndic[1] - posIndic[1];
+			ydiff = ghostPosIndic[0] - posIndic[0];
+
+			if (xdiff > 0) {
+				xhint = 1;
+			} else {
+				xhint = 0;
+			}
+
+			if (ydiff > 0) {
+				yhint = 1;
+			} else {
+				yhint = 0;
+			}
+
+			if (searchingy) {
+				if (checkSpace(ghostPosIndic) && ghostPosIndic != firstPath.input[i] && yhint == 0) {
+					ghostPosIndic = [ghostPosIndic[0] + 1, ghostPosIndic[1]];
+					firstPath.addInput(ghostPosIndic);
+					if (ghostPosIndic == posIndic) {
+						console.log("found");
+						searchingy = false;
+					}
+				} else if (checkSpace(ghostPosIndic) && ghostPosIndic != firstPath.input[i] && yhint == 1) {
+					ghostPosIndic = [ghostPosIndic[0] - 1, ghostPosIndic[1]];
+					firstPath.addInput(ghostPosIndic);
+					if (ghostPosIndic == posIndic) {
+						searchingy = false;
+					}
+				}
+			} else if (searchingx) {
+				if (checkSpace(ghostPosIndic) && ghostPosIndic != firstPath.input[i] && xhint == 0) {
+					ghostPosIndic = [ghostPosIndic[0], ghostPosIndic[1] + 1];
+					firstPath.addInput(ghostPosIndic);
+					if (ghostPosIndic == posIndic) {
+						searchingx = false;
+					}
+				} else if (checkSpace(ghostPosIndic) && ghostPosIndic != firstPath.input[i] && xhint == 1) {
+					ghostPosIndic = [ghostPosIndic[0], ghostPosIndic[1] - 1];
+					firstPath.addInput(ghostPosIndic);
+					if (ghostPosIndic == posIndic) {
+						searchingx = false;
+					}
+				}
+			}
+		}
+	}
+
+	</script>
+
+</body>
+</html>
